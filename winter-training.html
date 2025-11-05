@@ -1,0 +1,675 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <title>TECHSOFTZEN - Best IT & Digital Marketing Comapny</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+  <link href="https://fonts.googleapis.com/css?family=Montserrat:200,300,400,500,600,700,800&display=swap"
+    rel="stylesheet">
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+  <link rel="stylesheet" href="css/animate.css">
+  <link rel="stylesheet" href="css/owl.carousel.min.css">
+  <link rel="stylesheet" href="css/owl.theme.default.min.css">
+  <link rel="stylesheet" href="css/magnific-popup.css">
+  <link rel="stylesheet" href="css/flaticon.css">
+  <link rel="stylesheet" href="css/style.css">
+  <style>
+    :root {
+      --bg: #ffffff;
+      --muted: #6b7280;
+      --accent: #0f172a;
+      --card: #f8fafc;
+      --border: #e6edf3;
+    }
+
+    .table-wrap {
+      max-width: 980px;
+      margin: 0 auto;
+      background: var(--bg);
+      border-radius: 12px;
+      box-shadow: 0 6px 18px rgba(15, 23, 42, 0.06);
+      overflow: hidden;
+      border: 1px solid var(--border);
+    }
+
+    table.responsive {
+      width: 100%;
+      border-collapse: collapse;
+      table-layout: auto;
+      min-width: 320px;
+    }
+
+    thead {
+      background: linear-gradient(90deg, #f1f5f9, #fff);
+    }
+
+    thead th {
+      text-align: left;
+      font-size: 0.95rem;
+      padding: 14px 18px;
+      color: var(--muted);
+      letter-spacing: 0.2px;
+      border-bottom: 1px solid var(--border);
+    }
+
+    tbody td {
+      padding: 16px 18px;
+      vertical-align: top;
+      font-size: 0.98rem;
+      color: var(--accent);
+      border-bottom: 1px dashed var(--border);
+    }
+
+    /* Highlight the first column (Feature name) */
+    tbody td.feature {
+      width: 34%;
+      font-weight: 600;
+      color: #0b1220;
+    }
+
+    /* Small-screen stacked view */
+    @media (max-width:700px) {
+      thead {
+        display: none;
+      }
+
+      table.responsive,
+      tbody,
+      tr,
+      td {
+        display: block;
+        width: 100%;
+      }
+
+      tr {
+        margin: 0 0 10px 0;
+        background: transparent;
+        border-radius: 0;
+      }
+
+      tbody td {
+        padding: 10px 14px;
+        border-bottom: 1px solid rgba(14, 20, 30, 0.04);
+        position: relative;
+      }
+
+      /* Show label before each cell using data-label attr */
+      tbody td:before {
+        content: attr(data-label);
+        display: block;
+        font-size: 0.80rem;
+        color: var(--muted);
+        margin-bottom: 6px;
+        font-weight: 600;
+        text-transform: capitalize;
+      }
+
+      tbody td.feature {
+        padding-top: 6px;
+      }
+    }
+
+    /* Extras: small visual badges for certain values */
+    .badge {
+      display: inline-block;
+      font-size: 0.78rem;
+      padding: 6px 10px;
+      border-radius: 999px;
+      background: #eef2ff;
+      color: #3730a3;
+      margin-left: 6px;
+      vertical-align: middle;
+    }
+
+    /* Make long lists wrap nicely */
+    .value-list {
+      margin: 0;
+      padding: 0;
+      list-style: none;
+    }
+
+    .value-list li {
+      margin: 6px 0;
+      line-height: 1.45;
+    }
+
+    .steps-section {
+      max-width: 900px;
+      background: white;
+      border-radius: 20px;
+      box-shadow: 0 10px 30px rgba(0, 0, 0, 0.06);
+      overflow: hidden;
+      padding: 40px 30px;
+      text-align: center;
+      animation: fadeIn 0.8s ease-in-out;
+    }
+
+    .steps-section h2 {
+      font-size: 2rem;
+      color: #1e293b;
+      margin-bottom: 25px;
+    }
+
+    .steps-cards {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+      gap: 20px;
+      margin-bottom: 30px;
+    }
+
+    .step-card {
+      background: #f1f5f9;
+      border-radius: 16px;
+      padding: 22px 18px;
+      text-align: left;
+      transition: all 0.3s ease;
+      border: 1px solid #e2e8f0;
+      position: relative;
+    }
+
+    .step-card:hover {
+      transform: translateY(-5px);
+      box-shadow: 0 10px 20px rgba(0, 0, 0, 0.08);
+      background: #ffffff;
+    }
+
+    .step-number {
+      background: #2563eb;
+      color: white;
+      font-weight: 600;
+      width: 34px;
+      height: 34px;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      border-radius: 50%;
+      position: absolute;
+      top: 16px;
+      right: 16px;
+      font-size: 0.9rem;
+    }
+
+    .step-card p {
+      margin: 0;
+      font-size: 0.98rem;
+      line-height: 1.6;
+      color: #334155;
+    }
+
+    .cta-buttons {
+      display: flex;
+      justify-content: center;
+      gap: 16px;
+      flex-wrap: wrap;
+      margin-top: 10px;
+    }
+
+    .btn {
+      text-decoration: none;
+      padding: 12px 24px;
+      border-radius: 10px;
+      font-weight: 600;
+      transition: all 0.3s ease;
+      font-size: 0.95rem;
+    }
+
+    .btn-primary {
+      background: #2563eb;
+      color: white;
+    }
+
+    .btn-primary:hover {
+      background: #1d4ed8;
+      transform: translateY(-2px);
+    }
+
+    .btn-outline {
+      border: 2px solid #2563eb;
+      color: #2563eb;
+      background: transparent;
+    }
+
+    .btn-outline:hover {
+      background: #2563eb;
+      color: white;
+      transform: translateY(-2px);
+    }
+
+    @keyframes fadeIn {
+      from {
+        opacity: 0;
+        transform: translateY(10px);
+      }
+
+      to {
+        opacity: 1;
+        transform: translateY(0);
+      }
+    }
+
+    @media (max-width: 600px) {
+      .steps-section h2 {
+        font-size: 1.6rem;
+      }
+    }
+  </style>
+</head>
+
+<body>
+  <div class="wrap">
+    <div class="container">
+      <div class="row justify-content-between">
+        <div class="col-12 col-md d-flex align-items-center">
+          <p class="mb-0 phone"><span class="mailus">Phone no:</span> <a href="#">+91 9336110779</a> or <span
+              class="mailus">email us:</span> <a href="#">techsoftzen@gmail.com</a></p>
+        </div>
+        <div class="col-12 col-md d-flex justify-content-md-end">
+          <div class="social-media">
+            <p class="mb-0 d-flex">
+              <a href="#" class="d-flex align-items-center justify-content-center"><span class="fa fa-facebook"><i
+                    class="sr-only">Facebook</i></span></a>
+              <a href="#" class="d-flex align-items-center justify-content-center"><span class="fa fa-twitter"><i
+                    class="sr-only">Twitter</i></span></a>
+              <a href="#" class="d-flex align-items-center justify-content-center"><span class="fa fa-instagram"><i
+                    class="sr-only">Instagram</i></span></a>
+              <a href="#" class="d-flex align-items-center justify-content-center"><span class="fa fa-dribbble"><i
+                    class="sr-only">Dribbble</i></span></a>
+            </p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <nav class="navbar navbar-expand-lg navbar-dark ftco_navbar bg-dark ftco-navbar-light" id="ftco-navbar">
+    <div class="container">
+      <a class="navbar-brand" href="index.html"><img src="./images/techsoftzen-logo.png" height="70px"></a>
+      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#ftco-nav"
+        aria-controls="ftco-nav" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="oi oi-menu"></span> Menu
+      </button>
+
+      <div class="collapse navbar-collapse" id="ftco-nav">
+        <ul class="navbar-nav ml-auto">
+          <li class="nav-item active"><a href="index.html" class="nav-link">Home</a></li>
+          <li class="nav-item"><a href="about.html" class="nav-link">About</a></li>
+          <li class="nav-item dropdown">
+            <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+              Our Services
+            </a>
+            <ul class="dropdown-menu">
+              <li><a class="dropdown-item" href="#">Website Delevopment</a></li>
+              <li><a class="dropdown-item" href="#">Software Development</a></li>
+              <li><a class="dropdown-item" href="#">Mobile App Development</a></li>
+              <li><a class="dropdown-item" href="#">SEO Services</a></li>
+              <li><a class="dropdown-item" href="#">SMO Services</a></li>
+              <li><a class="dropdown-item" href="#">Graphics & UI/UX Design</a></li>
+            </ul>
+          </li>
+          <li class="nav-item dropdown">
+            <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+              Training/Internship
+            </a>
+            <ul class="dropdown-menu">
+              <li><a class="dropdown-item" href="./summer-training.html">Summer Training(CS/IT)</a></li>
+              <li><a class="dropdown-item" href="./vocational-training.html">Vocational Training (CS/IT)</a></li>
+              <li><a class="dropdown-item" href="./winter-training.html">Winter Training (CS/IT)</a></li>
+              <li><a class="dropdown-item" href="./apprenticeship.html">Apprenticeship Training</a></li>
+              <li><a class="dropdown-item" href="./digitalm.html">Digital Marketing Training</a></li>
+              <li>
+                <hr class="dropdown-divider">
+              </li>
+              <li><a class="dropdown-item" href="./courses.html">All Courses</a></li>
+            </ul>
+          </li>
+          <li class="nav-item"><a href="./courses.html" class="nav-link">Courses</a></li>
+          <li class="nav-item"><a href="contact.html" class="nav-link">Contact us</a></li>
+          <li class="nav-item cta"><a href="#" class="nav-link">Enroll Now</a></li>
+
+        </ul>
+      </div>
+    </div>
+  </nav>
+  <!-- END nav -->
+  <section class="hero-wrap hero-wrap-2" style="background-color: #dd7c1c;" data-stellar-background-ratio="0.1">
+    <div class="container">
+      <div class="row no-gutters slider-text align-items-end justify-content-center">
+        <div class="col-md-9 ftco-animate pb-5 text-center">
+          <h1 class="mb-3 bread">Winter Training Program</h1>
+          <p class="breadcrumbs"><span class="mr-2"><a href="index.html">Home <i
+                  class="fa fa-chevron-right"></i></a></span> <span class="mr-2"><a href="blog.html">training <i
+                  class="fa fa-chevron-right"></i></a></span> <span>Summer Training <i
+                class="fa fa-chevron-right"></i></span></p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="ftco-section">
+    <div class="container">
+      <div class="row">
+        <div class="ftco-animate">
+          <h2 class="mb-2 steps-section">Winter Training Program - TECHSOFTZEN</h2>
+          <div class="steps-section" style="text-align: left;">
+            <p><span class="badge">Learn</span><span class="badge">Build</span><span class="badge">Achieve</span><span
+                class="badge">Shape Your Future With Real-World IT Skills!</span>
+              <br>
+              Winter may be cold — but your career goals shouldn’t freeze!<br><br>
+              At TECHSOFTZEN SOLUTIONS PVT LTD, we bring you a <b>Winter Training Program</b> designed to sharpen your
+              skills, boost your confidence, and prepare you for tomorrow's digital world.<br>This is the perfect time
+              for students to learn hands-on IT skills, work on live industrial projects, and gain real-world exposure
+              to technologies used in top companies — all in a highly practical, guided environment.
+            </p>
+            <p>
+              <img src="images/image_6.jpg" alt="" class="img-fluid">
+            </p>
+          </div>
+
+          <h2 class="mb-3 steps-section" style="margin-top: 5px;">Program Highlights at a Glance</h2>
+          <div class="table-wrap" role="table" aria-label="Program features">
+            <table class="responsive" role="presentation">
+              <thead>
+                <tr>
+                  <th scope="col">Feature</th>
+                  <th scope="col">Details</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td class="feature" data-label="Feature">Duration</td>
+                  <td data-label="Details">4 to 6 weeks during <strong>June–August</strong> (flexible to your college
+                    schedule)</td>
+                </tr>
+
+                <tr>
+                  <td class="feature" data-label="Feature">Technologies Covered</td>
+                  <td data-label="Details">
+                    <ul class="value-list">
+                      <li>HTML5, CSS3, JavaScript, Bootstrap</li>
+                      <li>MERN / Django / Java Full Stack</li>
+                      <li>Android / Flutter &amp; more</li>
+                    </ul>
+                  </td>
+                </tr>
+
+                <tr>
+                  <td class="feature" data-label="Feature">Project Module</td>
+                  <td data-label="Details">Multiple mini-projects + <strong>1 major live project</strong> (20+ modules)
+                  </td>
+                </tr>
+
+                <tr>
+                  <td class="feature" data-label="Feature">Extras</td>
+                  <td data-label="Details">
+                    <ul class="value-list">
+                      <li>Resume &amp; interview prep</li>
+                      <li>Freelancing insights</li>
+                      <li>Hosting &amp; live URL</li>
+                    </ul>
+                  </td>
+                </tr>
+
+                <tr>
+                  <td class="feature" data-label="Feature">Certification &amp; Awards</td>
+                  <td data-label="Details">Certificate on completion • Recognition for top performers <span
+                      class="badge">Top Performer</span></td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+          <h2 class="mb-3 steps-section" style="margin-top: 5px;">Who Can Join Us</h2>
+          <section class="steps-section" style="margin-top: 5px; text-align: left;">
+            <p>Open to students pursuing:</p>
+            <li>Diploma in Computer Science / Information Technology</li>
+            <li>B.Tech / B.E in CSE / IT (any specialization)</li>
+            <li>BCA / MCA</li>
+            <li><b>If you’re motivated, eager to build your digital future and ready to dedicate time this summer —
+                you’re the ideal candidate.</b></li>
+            <div class="tag-widget post-tag-container mb-5 mt-5">
+              <div class="tagcloud">
+                <a href="#" class="tag-cloud-link">BTech</a>
+                <a href="#" class="tag-cloud-link">BCA</a>
+                <a href="#" class="tag-cloud-link">Diploma</a>
+                <a href="#" class="tag-cloud-link">MCA</a>
+              </div>
+            </div>
+          </section>
+          <h2 class="mb-3 steps-section" style="margin-top: 5px;">Why Choose TECHSOFTZEN Vocational Training?</h2>
+          <div class="steps-section" style="text-align: left;">
+            <p>
+              <li>Live project-based learning with real-industry use cases</li>
+              <li>Expert mentors from IT & software industry</li>
+              <li>Dedicated lab sessions & technical support</li>
+              <li>Professional certifications & internship opportunities</li>
+              <li>Soft-skills & personality development training</li>
+              <li>100% practical approach — learn by doing</li>
+              <li>Resume + LinkedIn + Interview preparation</li>
+            </p>
+          </div>
+          <h2 class="mb-3 steps-section" style="margin-top: 5px;">Your Next Steps?</h2>
+          <div class="steps-cards">
+            <div class="step-card">
+              <!-- <div class="step-number">1</div> -->
+              <p>Click <strong>“Enroll Now”</strong> to fill our short registration form.</p>
+            </div>
+            <div class="step-card">
+              <!-- <div class="step-number">2</div> -->
+              <p>Attend a <strong>free demo session</strong> (optional) to experience our teaching style and
+                environment.</p>
+            </div>
+            <div class="step-card">
+              <!-- <div class="step-number">3</div> -->
+              <p>Secure your seat (limited slots) and begin your journey this summer with <strong>TECHSOFTZEN</strong>.
+              </p>
+            </div>
+          </div>
+
+          <p style="font-size:1.05rem; color:#334155; margin-bottom: 24px;">
+            Ready to transform your summer into a <strong>tech-power experience?</strong>
+          </p>
+
+          <div class="cta-buttons">
+            <a href="#" class="btn btn-primary">Enroll Now</a>
+            <a href="#" class="btn btn-outline">Book Your Free Demo</a>
+          </div>
+  </section>
+  </div>
+  </div>
+  </div>
+  </div>
+  </section>
+
+  <section class="ftco-section bg-light ftco-faqs">
+    <div class="container">
+      <div class="row">
+        <div class="col-lg-6 order-md-last">
+          <div
+            class="img img-video d-flex align-self-stretch align-items-center justify-content-center justify-content-md-center mb-4 mb-sm-0"
+            style="background-image:url(images/about.jpg);">
+          </div>
+          <div class="d-flex mt-3">
+            <div class="img img-2 mr-md-2 w-100" style="background-image:url(images/about-1.jpg);"></div>
+            <div class="img img-2 ml-md-2 w-100" style="background-image:url(images/about-2.jpg);"></div>
+          </div>
+        </div>
+
+        <div class="col-lg-6">
+          <div class="heading-section mb-5 mt-5 mt-lg-0">
+            <h2 class="mb-3">Frequently Asks Questions</h2>
+          </div>
+          <div id="accordion" class="myaccordion w-100" aria-multiselectable="true">
+            <div class="card">
+              <div class="card-header p-0" id="headingOne">
+                <h2 class="mb-0">
+                  <button href="#collapseOne"
+                    class="d-flex py-3 px-4 align-items-center justify-content-between btn btn-link"
+                    data-parent="#accordion" data-toggle="collapse" aria-expanded="true" aria-controls="collapseOne">
+                    <p class="mb-0">Do I need prior programming experience?</p>
+                    <i class="fa" aria-hidden="true"></i>
+                  </button>
+                </h2>
+              </div>
+              <div class="collapse show" id="collapseOne" role="tabpanel" aria-labelledby="headingOne">
+                <div class="card-body py-3 px-0">
+                  <p class="px-4">No, this program accommodates beginners and those with some coding background.</p>
+                </div>
+              </div>
+            </div>
+
+            <div class="card">
+              <div class="card-header p-0" id="headingTwo" role="tab">
+                <h2 class="mb-0">
+                  <button href="#collapseTwo"
+                    class="d-flex py-3 px-4 align-items-center justify-content-between btn btn-link"
+                    data-parent="#accordion" data-toggle="collapse" aria-expanded="false" aria-controls="collapseTwo">
+                    <p class="mb-0">Will I receive a certificate?</p>
+                    <i class="fa" aria-hidden="true"></i>
+                  </button>
+                </h2>
+              </div>
+              <div class="collapse" id="collapseTwo" role="tabpanel" aria-labelledby="headingTwo">
+                <div class="card-body py-3 px-0">
+                  <p class="px-4">Yes, after successful completion you’ll receive a recognised certificate from
+                    TECHSOFTZEN.</p>
+                </div>
+              </div>
+            </div>
+
+            <div class="card">
+              <div class="card-header p-0" id="headingThree" role="tab">
+                <h2 class="mb-0">
+                  <button href="#collapseThree"
+                    class="d-flex py-3 px-4 align-items-center justify-content-between btn btn-link"
+                    data-parent="#accordion" data-toggle="collapse" aria-expanded="false" aria-controls="collapseThree">
+                    <p class="mb-0">Can I opt for online or offline?</p>
+                    <i class="fa" aria-hidden="true"></i>
+                  </button>
+                </h2>
+              </div>
+              <div class="collapse" id="collapseThree" role="tabpanel" aria-labelledby="headingTwo">
+                <div class="card-body py-3 px-0">
+                  <p class="px-4">We primarily run offline to give you hands-on lab access and peer interaction; however
+                    we also have blended/online options for distance learners.</p>
+                </div>
+              </div>
+            </div>
+
+            <div class="card">
+              <div class="card-header p-0" id="headingFour" role="tab">
+                <h2 class="mb-0">
+                  <button href="#collapseFour"
+                    class="d-flex py-3 px-4 align-items-center justify-content-between btn btn-link"
+                    data-parent="#accordion" data-toggle="collapse" aria-expanded="false" aria-controls="collapseFour">
+                    <p class="mb-0">What’s the benefit after the training?</p>
+                    <i class="fa" aria-hidden="true"></i>
+                  </button>
+                </h2>
+              </div>
+              <div class="collapse" id="collapseFour" role="tabpanel" aria-labelledby="headingTwo">
+                <div class="card-body py-3 px-0">
+                  <p class="px-4">You’ll walk away with a live project, enhanced resume, practical skills and more
+                    readiness for internships or jobs.</p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <footer class="ftco-footer ftco-footer-2 ftco-section">
+    <div class="container">
+      <div class="row mb-5">
+        <div class="col-md">
+          <div class="ftco-footer-widget mb-4">
+            <h2 class="ftco-footer-logo"><span style="color: #dd7c1c;">TECH</span><span
+                style="color: #36559d;">SOFT</span><span style="color: #dd7c1c;">ZEN</span></h2>
+            <p>At TECHSOFTZEN Solutions Pvt Ltd, we are more than just an IT company — we are digital architects,
+              strategists, and mentors.</p>
+            <ul class="ftco-footer-social list-unstyled mt-2">
+              <li class="ftco-animate"><a href="#"><span class="fa fa-twitter"></span></a></li>
+              <li class="ftco-animate"><a href="#"><span class="fa fa-facebook"></span></a></li>
+              <li class="ftco-animate"><a href="#"><span class="fa fa-instagram"></span></a></li>
+            </ul>
+          </div>
+        </div>
+        <div class="col-md">
+          <div class="ftco-footer-widget mb-4 ml-md-5">
+            <h2 class="ftco-heading-2">Usefull Links</h2>
+            <ul class="list-unstyled">
+              <li><a href="#" class="py-2 d-block">About</a></li>
+              <li><a href="#" class="py-2 d-block">Contact</a></li>
+              <li><a href="#" class="py-2 d-block">What We Do</a></li>
+              <li><a href="#" class="py-2 d-block">Training</a></li>
+              <li><a href="#" class="py-2 d-block">Courses</a></li>
+              <li><a href="#" class="py-2 d-block">Careers</a></li>
+            </ul>
+          </div>
+        </div>
+        <div class="col-md">
+          <div class="ftco-footer-widget mb-4">
+            <h2 class="ftco-heading-2">Services</h2>
+            <ul class="list-unstyled">
+              <li><a href="#" class="py-2 d-block">Software Development</a></li>
+              <li><a href="#" class="py-2 d-block">Website Development</a></li>
+              <li><a href="#" class="py-2 d-block">SEO/SEM Services</a></li>
+              <li><a href="#" class="py-2 d-block">Graphics & UI/UX Design</a></li>
+              <li><a href="#" class="py-2 d-block">Mobile App Development</a></li>
+            </ul>
+          </div>
+        </div>
+        <div class="col-md">
+          <div class="ftco-footer-widget mb-4">
+            <h2 class="ftco-heading-2">Have a Questions?</h2>
+            <div class="block-23 mb-3">
+              <ul>
+                <li><span class="icon fa fa-map marker"></span><span class="text">2/666 Near Mama Chauraha, Sector 2,
+                    Vikas Nagar, Lucknow, Uttar Pradesh 226022</span></li>
+                <li><a href="#"><span class="icon fa fa-phone"></span><span class="text">+91 9336110779</span></a></li>
+                <li><a href="#"><span class="icon fa fa-paper-plane pr-4"></span><span
+                      class="text">techsoftzen@gmail.com</span></a></li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="row">
+        <div class="col-md-12 text-center">
+          <p>Copyright &copy;
+            <script>document.write(new Date().getFullYear());</script> All rights reserved | Developed by <a
+              href="https://techsoftzen.com" target="_blank">TECHSOFTZEN</a>
+          </p>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <!-- loader -->
+  <div id="ftco-loader" class="show fullscreen"><svg class="circular" width="48px" height="48px">
+      <circle class="path-bg" cx="24" cy="24" r="22" fill="none" stroke-width="4" stroke="#eeeeee" />
+      <circle class="path" cx="24" cy="24" r="22" fill="none" stroke-width="4" stroke-miterlimit="10"
+        stroke="#F96D00" />
+    </svg></div>
+
+  <script src="js/jquery.min.js"></script>
+  <script src="js/jquery-migrate-3.0.1.min.js"></script>
+  <script src="js/popper.min.js"></script>
+  <script src="js/bootstrap.min.js"></script>
+  <script src="js/jquery.easing.1.3.js"></script>
+  <script src="js/jquery.waypoints.min.js"></script>
+  <script src="js/jquery.stellar.min.js"></script>
+  <script src="js/owl.carousel.min.js"></script>
+  <script src="js/jquery.magnific-popup.min.js"></script>
+  <script src="js/jquery.animateNumber.min.js"></script>
+  <script src="js/scrollax.min.js"></script>
+  <script
+    src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBVWaKrjvy3MaE7SQ74_uJiULgl1JY0H2s&sensor=false"></script>
+  <script src="js/google-map.js"></script>
+  <script src="js/main.js"></script>
+
+</body>
+
+</html>
